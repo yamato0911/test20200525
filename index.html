@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+</head>
+
+<body>
+
+    <div class="top-header">
+        <div class="header-left">
+            <p class="header-text">left-p</p>
+        </div>
+        <div class="header-center">
+            <ul>
+                <li><a href="file:///Users/yamato/Desktop/jQuery/index.html" class="header-link">home</a></li>
+                <li><a href="#" class="header-link">profile</a></li>
+                <li id="contact"><a href="file:///Users/yamato/Desktop/jQuery/pages/contact.html" class="header-link" >contact</a></li>
+            </ul>
+        </div>
+        <div class="header-right">
+            <p class="header-text">right-p</p>
+        </div>
+    </div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"
+                style="background-image:url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(https://cdn.pixabay.com/photo/2017/02/01/22/02/mountain-landscape-2031539_960_720.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_960_720.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(https://cdn.pixabay.com/photo/2016/08/11/23/48/italy-1587287_960_720.jpg)">
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+
+
+    <div class="signin-modal wow animate__fadeInRight" data-wow-duration="1.8s">
+        <h2>New Account</h2>
+        <span class=""><i class="fas fa-times close"></i></span>
+        <form action="" class="form">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="..@gmail.com">
+            <input type="password" placeholder="password">
+        </form>
+        <div class="btn click-btn">Click</div>
+    </div>
+    <div class="login-modal wow animate__fadeInRight" data-wow-duration="1.8s">
+        <h2>Login</h2><span class=""><i class="fas fa-times close"></i></span>
+        <form action="" class="form">
+            <input type="text" placeholder="User Name">
+            <input type="email" placeholder="..@gmail.com">
+            <input type="password" placeholder="password">
+        </form>
+        <form action="" class="sns">
+            <input type="button" value="twitter" onclick="twitterShow()" class="twitter">
+            <input type="button" value="facebook" onclick="facebookShow()" class="facebook">
+        </form>
+        <form action="" class="snsID">
+            <input type="text" placeholder="twitterID" id="twitterID">
+            <input type="text" placeholder="facebookID" id="facebookID">
+        </form>
+
+        <div class="btn click-btn">Click</div>
+
+    </div>
+
+    <h1 id="main-title">
+        Find Your Home
+    </h1>
+    <div class="btns">
+        <div class="btn new-btn">Creat Account</div>
+        <div class="btn login-btn">Login</div>
+    </div>
+
+
+
+
+
+    <div class="box-all">
+        <div class="box1">
+            <h1 class="wow animate__headShake" data-wow-duration="3.0s">BOX1</h1>
+        </div>
+        <div class="box2">
+            <h1 class="wow animate__zoomOut" data-wow-duration="3.0s">BOX2</h1>
+        </div>
+        <div class="box3 wow animate__slideInRight" data-wow-duration="3.0s">
+            <h1>BOX3</h1>
+        </div>
+
+        <div class="btn-group">
+            <div class="btn btn1">Button</div>
+            <div class="btn btn2">Button</div>
+            <div class="btn btn3">Button</div>
+            <div class="btn btn4">Button</div>
+        </div>
+
+        <div class="btn-group">
+            <div class="btn btn5">Button</div>
+            <div class="btn slide-bg">
+                Button</div>
+            <div class="btn cover-3D">
+                Button</div>
+            <div class="btn2 cubic">
+                <span class="hovering">Now, Hovering</span>
+                <span class="default">Button</span>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script>
+        function twitterShow() {
+            document.getElementById("twitterID").style.display = "block";
+            document.getElementById("facebookID").style.display = "none";
+
+        }
+
+        function facebookShow() {
+            document.getElementById("facebookID").style.display = "block";
+            document.getElementById("twitterID").style.display = "none";
+        }
+
+        var myswiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            effect: 'fade',
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW({
+            mobile: false
+        }).init();
+    </script>
+</body>
+
+</html>
